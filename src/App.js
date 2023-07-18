@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./App.css";
+import './index.css';
 import OurStore from "./pages/OurStore";
 import Blogs from "./components/Blogs";
 import CompareProduct from "./pages/CompareProduct";
@@ -19,6 +20,7 @@ import ShippingPolicy from "./pages/ShippingPolicy";
 import RefunPolicy from "./pages/RefunPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import SingleProduct from "./pages/SingleProduct";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
             <Route path="store/product/:id" element={<SingleProduct />} />
             <Route path="/blog" element={<Blogs />} />
             <Route path="blogs/:id" element={<SingleBlog />} />
+            <Route path="cart" element={<Cart />} />
             <Route path="/product" element={<CompareProduct />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/term-contion" element={<TermAndContions />} />

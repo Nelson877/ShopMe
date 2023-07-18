@@ -11,11 +11,24 @@ import addcart from "../images/add-cart.svg";
 import view from "../images/view.svg";
 import FAQData from "../data/faqs.json";
 import PeoData from "../data/pro.json";
-import ReactImageZoom from 'react-image-zoom';
+import ReactImageMagnify from "react-image-magnify";
+import watchImg300 from "../images/acc.jpg";
+import watchImg1200 from "../images/acc1.jpg";
+import Color from "../components/Color";
+import { TbGitCompare } from "react-icons/tb";
+import { AiOutlineHeart } from "react-icons/ai";
 
 function SingleProduct() {
   const [orderProduct, setOrderProduct] = useState(false);
-  const props = {width: 400, height: 250, zoomWidth: 500, img: {wish}};
+  const copyTpClipboard = (text) => {
+    console.log("text", text);
+    var textField = document.createElement("textarea");
+    textField.innerText = text;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
+  };
 
   return (
     <div>
@@ -27,11 +40,209 @@ function SingleProduct() {
             <div className="col-6">
               <div className="main-product-image">
                 <div>
-                <ReactImageZoom {...props} />
+                  <ReactImageMagnify
+                    className="img__product"
+                    {...{
+                      smallImage: {
+                        alt: "Wristwatch by Ted Baker London",
+                        isFluidWidth: true,
+                        src: watchImg300,
+                      },
+                      largeImage: {
+                        src: watchImg1200,
+                        width: 1200,
+                        height: 1800,
+                      },
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="other-product__images d-flex flex-wrap gap-15">
+                <div>
+                  <ReactImageMagnify
+                    className="img__product"
+                    {...{
+                      smallImage: {
+                        alt: "Wristwatch by Ted Baker London",
+                        isFluidWidth: true,
+                        src: watchImg300,
+                      },
+                      largeImage: {
+                        src: watchImg1200,
+                        width: 1200,
+                        height: 1800,
+                      },
+                    }}
+                  />
+                </div>
+                <div>
+                  <ReactImageMagnify
+                    className="img__product"
+                    {...{
+                      smallImage: {
+                        alt: "Wristwatch by Ted Baker London",
+                        isFluidWidth: true,
+                        src: watchImg300,
+                      },
+                      largeImage: {
+                        src: watchImg1200,
+                        width: 1200,
+                        height: 1800,
+                      },
+                    }}
+                  />
+                </div>
+                <div>
+                  <ReactImageMagnify
+                    className="img__product"
+                    {...{
+                      smallImage: {
+                        alt: "Wristwatch by Ted Baker London",
+                        isFluidWidth: true,
+                        src: watchImg300,
+                      },
+                      largeImage: {
+                        src: watchImg1200,
+                        width: 1200,
+                        height: 1800,
+                      },
+                    }}
+                  />
+                </div>
+                <div>
+                  <ReactImageMagnify
+                    className="img__product"
+                    {...{
+                      smallImage: {
+                        alt: "Wristwatch by Ted Baker London",
+                        isFluidWidth: true,
+                        src: watchImg300,
+                      },
+                      largeImage: {
+                        src: watchImg1200,
+                        width: 1200,
+                        height: 1800,
+                      },
+                    }}
+                  />
                 </div>
               </div>
             </div>
-            <div className="col-6"></div>
+            <div className="col-6">
+              <div className="main__product__details">
+                <div className="">
+                  <h3 className="title">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </div>
+                <div className="border-bottom">
+                  <p className="price">$ 0.00</p>
+                  <div className="d-flex align-items-center gap-10">
+                    <ReactStars
+                      count={5}
+                      size={24}
+                      value={4}
+                      edit={false}
+                      activeColor="#ffd700"
+                    />
+                    <p className="mb-0 review__b ">( 2 Reviews )</p>
+                  </div>
+                  <a href="#review" className="review__btn">
+                    Write a Review
+                  </a>
+                </div>
+                <div className="border-bottom py-3">
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product__heading">Type :</h3>
+                    <p className="product__data">Item Type</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product__heading">Brand :</h3>
+                    <p className="product__data">Havlls</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product__heading">Category :</h3>
+                    <p className="product__data">Item Name</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product__heading">Tags :</h3>
+                    <p className="product__data">Item Tag</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product__heading">Availablity :</h3>
+                    <p className="product__data">In Stock</p>
+                  </div>
+                  <div className="d-flex gap-10 flex-column my-2 mb-3">
+                    <h3 className="product__heading">Size :</h3>
+                    <div className="d-flex flex-wrap gap-15">
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        S
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        M
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        XL
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        XXL
+                      </span>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-10 flex-column my-2 mb-3">
+                    <h3 className="product__heading">Colour :</h3>
+                    <Color />
+                  </div>
+                  <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3">
+                    <h3 className="product__heading">Quantity :</h3>
+                    <div className="">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        style={{ width: "70px" }}
+                        min={1}
+                        max={10}
+                        className="form-control"
+                      />
+                    </div>
+                    <div className="d-flex align-items-center gap-30 ms-5">
+                      <button className="button border-0">Add to Cart</button>
+                      <button className="button border-0">Buy It Now</button>
+                    </div>
+                  </div>
+                  <div className="d-flex  align-items-center gap-15">
+                    <div>
+                      <a href="">
+                        <TbGitCompare className="fs-5 me-2" /> Add to Compare
+                      </a>
+                    </div>
+                    <div>
+                      <a href="">
+                        <AiOutlineHeart className="fs-5 me-2" />
+                        Add to Wishlist
+                      </a>
+                    </div>
+                  </div>
+                  <div className="d-flex flex-column  my-3">
+                    <h3 className="product__heading">Shipping & Returns</h3>
+                    <p className="product__data">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maiores aut eum autem ut excepturi ullam dolorem vel,
+                    </p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-3">
+                    <h3 className="product__heading">Product Link</h3>
+                    <a
+                      href="javascript:void(0);"
+                      onClick={() => {
+                        copyTpClipboard("http://localhost:3000/static/media/acc.51d6fc6f289bbddde41b.jpg")
+                      }}
+                    >Copy Product Link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -54,7 +265,7 @@ function SingleProduct() {
       {/* Description section  */}
 
       {/* Reviews section  */}
-      <section className="reviews-wrapper py-5 home-wrapper-2">
+      <section id="review" className="reviews-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">

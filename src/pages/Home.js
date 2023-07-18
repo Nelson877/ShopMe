@@ -249,45 +249,6 @@ function Home() {
                     <h6>Headphone</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src={headphone} alt="" />
-                </div>
-                {/* image section 3 end  */}
-                {/* image section 4 */}
-                <div className="d-flex gap align-items-center">
-                  <div>
-                    <h6>Cameras</h6>
-                    <p>10 Items</p>
-                  </div>
-                  <img src={camera} alt="" />
-                </div>
-                {/* image section 4 end  */}
-
-                {/* New section  */}
-                {/* image section 1 */}
-                <div className="d-flex gap align-items-center">
-                  <div>
-                    <h6>Mobile & Tablets</h6>
-                    <p>5 Items</p>
-                  </div>
-                  <img src="" alt="Mobile" />
-                </div>
-                {/* image section 1 end  */}
-
-                {/* image section 2 */}
-                <div className="d-flex gap align-items-center">
-                  <div>
-                    <h6>Accessories</h6>
-                    <p>10 Items</p>
-                  </div>
-                  <img src={acc} alt="" />
-                </div>
-                {/* image section 2 end  */}
-                {/* image section 3 */}
-                <div className="d-flex gap align-items-center">
-                  <div>
-                    <h6>Portable Speakers</h6>
-                    <p>10 Items</p>
-                  </div>
                   <img src={homeap} alt="" />
                 </div>
                 {/* image section 3 end  */}
