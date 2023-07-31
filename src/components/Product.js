@@ -1,7 +1,56 @@
-import React from 'react';
+import React, { useContext } from "react";
+// import link
+import { Link } from "react-router-dom";
 
-const Product = () => {
-  return <div>Product</div>;
+// import icons
+import { BsPlus, BsEyeFill } from "react-icons/bs";
+
+const Product = ({ product }) => {
+  console.log(product);
+
+  //  destructure product
+  const { id, image, category, title, price } = product;
+
+  return (
+    <div>
+      <div className="border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition">
+        <div className="w-full h-full flex justify-center items-center">
+          {/* imgae  */}
+          <div className="w-[200px] mx-auto flex justify-center items-center">
+            <img
+              className="max-h-[160px] group-hover:scale-110 transition duration-300"
+              src={image}
+              alt=""
+            />
+          </div>
+        </div>
+        {/* buttons */}
+        <div className="absolute top-0 right-0 bg-lime-500/50 p-2 flex flex-col items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100">
+          <button>
+            <div className="flex justify-center items-center text-white w-12 h-12 bg-lime-900">
+              <BsPlus className="text-3xl" />
+            </div>
+          </button>
+          <Link
+            to={"/"}
+            className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
+          >
+            <BsEyeFill />
+          </Link>
+        </div>
+      </div>
+      <div>2</div>
+    </div>
+  );
 };
 
 export default Product;
+
+{
+  /* <div
+className="w-full h-[300px] bg-neutral-100"
+key={product.id}
+>
+{product.title}
+</div> */
+}

@@ -1,7 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const ProductDetails = () => {
-  return <div>Product Details Page</div>;
-};
+function ProductDetails() {
+  return (
+    <div>ProductDetails</div>
+  )
+}
 
-export default ProductDetails;
+export default ProductDetails
