@@ -16,10 +16,11 @@ import CartItem from "../components/CartItem";
 // import cart context
 import { CartContext } from "../contexts/CartContext";
 
+
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
   // console.log(useContext(CartContext));
-
+const {checkCart} =useContext(CartContext)
   const { cart, clearCart, total, itemAmount } = useContext(CartContext);
 
   return (
@@ -42,7 +43,8 @@ const Sidebar = () => {
           return <CartItem item={item} key={item.id} />;
         })}
       </div>
-      <div className="flex flex-col gap-y-3 py-4  mt-4">
+      {/* py-4 mt-4 */}
+      <div className="flex flex-col gap-y-3">
         <div className="flex w-full justify-between items-center">
           {/* total amount */}
           <div className="font-semibold uppercase">
@@ -51,14 +53,14 @@ const Sidebar = () => {
           {/* clear cart  */}
           <div
             onClick={clearCart}
-            className="cursor-pointer py-4 bg-lime-500 text-lime-950 w-12 flex justify-center items-center text-xl"
+            className="cursor-pointer py-4 bg-lime-500 text-lime-950 w-12 h-12 flex justify-center items-center text-xl"
           >
             <FiTrash2 />
           </div>
         </div>
 
         <Link to={'/'} className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium">View cart</Link>
-        <Link to={'/'} className="bg-lime-200 flex p-4 justify-center items-center text-primary w-full font-medium">Checkout</Link>
+        <Link to={'/checkout'} onClick={() => checkCart } className="bg-lime-200 flex p-4 justify-center items-center text-primary w-full font-medium">Checkout</Link>
       </div>
     </div>
   );

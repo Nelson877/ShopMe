@@ -10,7 +10,7 @@ import {CartContext} from '../contexts/CartContext'
 
 
 
-const Product = ({ product }) => {
+const Product = ({ product  }) => {
   // console.log(product);
 
   //  destructure product

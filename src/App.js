@@ -10,15 +10,18 @@ import ProductDetails from "./pages/ProductDetails";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Checkout from "./components/Checkout";
 
 function App() {
   return (
     <div>
       <Router>
         <Header />
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Sidebar />
         <Footer />

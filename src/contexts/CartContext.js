@@ -40,6 +40,12 @@ const CartProvider = ({ children }) => {
     });
     // console.log(cartItem);
 
+// Check out cart 
+const checkCart = () =>{
+  console.log('check out');
+}
+
+
     // If cart item is already in the cart
     if (cartItem) {
       const newCart = [...cart].map((item) => {
@@ -110,6 +116,7 @@ const CartProvider = ({ children }) => {
         decreaseAmount,
         itemAmount,
         total,
+        checkCart,
       }}
     >
       {children}
