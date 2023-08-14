@@ -6,7 +6,7 @@ import { CartContext } from "../contexts/CartContext";
 import Product from "./Product";
 import { ProductContext } from "../contexts/ProductContext";
 
-const Checkout = () => {
+const Checkout = ({image, title, price, category}) => {
   const { cart, clearCart, total, itemAmount } = useContext(CartContext);
 
   //  destructure product
@@ -107,16 +107,16 @@ const Checkout = () => {
           <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
               <img
-                className="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                src=''
+                className="m-2 h-28 w-24 rounded-md"
+                src='https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg'
                 alt=""
               />
               <div className="flex w-full flex-col px-4 py-4">
                 
-                  <span className="font-semibold">{}</span>
+                  <span className="font-semibold">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</span>
                 
-                <span className="float-right text-gray-400">{}</span>
-                <p className="mt-auto text-lg font-bold">₵ {}</p>
+                <span className="float-right text-gray-400">men's clothing</span>
+                <p className="mt-auto text-lg font-bold">₵ 109.95</p>
               </div>
             </div>
           </div>

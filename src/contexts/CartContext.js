@@ -41,9 +41,9 @@ const CartProvider = ({ children }) => {
     // console.log(cartItem);
 
 // Check out cart 
-const checkCart = () =>{
-  console.log('check out');
-}
+// const checkCart = () =>{
+//   console.log('check out');
+// }
 
 
     // If cart item is already in the cart
@@ -116,7 +116,7 @@ const checkCart = () =>{
         decreaseAmount,
         itemAmount,
         total,
-        checkCart,
+        // checkCart,
       }}
     >
       {children}

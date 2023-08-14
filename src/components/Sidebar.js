@@ -20,7 +20,7 @@ import { CartContext } from "../contexts/CartContext";
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
   // console.log(useContext(CartContext));
-const {checkCart} =useContext(CartContext)
+// const {checkCart} =useContext(CartContext)
   const { cart, clearCart, total, itemAmount } = useContext(CartContext);
 
   return (
@@ -60,7 +60,7 @@ const {checkCart} =useContext(CartContext)
         </div>
 
         <Link to={'/'} className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium">View cart</Link>
-        <Link to={'/checkout'} onClick={() => checkCart } className="bg-lime-200 flex p-4 justify-center items-center text-primary w-full font-medium">Checkout</Link>
+        <Link to={'/checkout'}  className="bg-lime-200 flex p-4 justify-center items-center text-primary w-full font-medium">Checkout</Link>
       </div>
     </div>
   );
