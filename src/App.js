@@ -11,6 +11,10 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Checkout from "./components/Checkout";
+import Tanx from "./components/Tanx";
+import Error from "./components/Error";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Register />} />
+          <Route path="/tanx" element={<Tanx />} />
+          <Route path="/error" element={<Error />} />
         </Routes>
         <Sidebar />
         <Footer />
